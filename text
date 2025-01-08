@@ -1,0 +1,15 @@
+Difference b/w group route and dynamical routing is that group route prevent that folder from being included and repesented through (marketing) about.js and dynamical routing is used for all type of dynamical created pages like blog/1, blog/2, blog/3 and so on.
+while on the other hand _folder is used to make a private folder 
+
+the beginner folder structure in that folder structure that he put all folder inside of app folder and app folder is in inside of src like
+app have component folder, home folder, profile folder and contact folder 
+
+in intermediate folder structure , put app folder, components folder, context folder and hooks folder all are in the src and 
+app folder have further file and folder by default it have the file like favicon.ico, globals.css, layout.tsx and page.tsx and folder like (routes), api and auth. 
+and routes have all the folders of pages like about folder, contact folder, dashboard folder, faq folder, products folder, profile folder and products have sub folder like [productId] for dynamical routing and it also have file like page.tsx
+
+
+advance type of folder structure, put app folder, components folder, config folder, db folder, hooks folder, server-actions folder, vendor folder all upper folder are inside of src folder 
+server-actions folder are those folder that contain functions or files that handle server-side actions, such as interacting with databases, handling form submissions, or performing other backend logic.
+and server-actions folder have sub folder like products folder, store, user
+app folder contain (admin) folder, (content) folder, (products) folder and auth folder all these folders are used for pages and auth folder fruther contain login folder and register folder and login folder contain private folder _components 
