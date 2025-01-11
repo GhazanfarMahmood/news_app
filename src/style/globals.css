@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --container-size-xl : 1300px;
+  --container-padding : 15px;
+}
+
+.container {
+  max-width: 1300px;
+  padding-inline: 15px;
+  margin-inline: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  
+}
