@@ -11,6 +11,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        light_sky : "var(--_c-primary)",
       },
       fontFamily : {
         bokor : ["var(--font-bokor)"],

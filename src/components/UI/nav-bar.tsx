@@ -20,7 +20,7 @@ export default function NavBar(){
                     <span>
                         <strong className="font-bokor text-[35px]">The DAILY NEWS</strong>
                     </span>
-                    <form className="max-w-[400px] w-full flex justify-center items-center p-1 border-2 border-black-300 rounded-[5px] has-[:focus]:border-black">
+                    <form className="max-w-[400px] w-full flex justify-center items-center p-1 border-2 border-black-300 rounded-[5px] has-[input:focus]:border-light_sky">
                         <input type="text" className="w-full input bg-transparent focus:outline-none"/>
                         <button>
                             <Image src={search_icon} alt="search_icon" width={20} height={20} />
@@ -28,21 +28,21 @@ export default function NavBar(){
                     </form>
                     <div className="flex justify-center items-center gap-5">
                         <ul className="flex justify-center items-center gap-5">
-                            <li className="hover:where" >
-                                <Link href="/" className="flex items-center justify-center gap-[5px] hover:text-sky-500 transition duration-200">
-                                    <Image src={house_icon} alt="house-icon" width={25} height={25} className="transition duration-200" />
+                            <li >
+                                <Link href="/" className="flex items-center justify-center gap-[5px] hover:text-light_sky group transition duration-200">
+                                    <Image src={house_icon} alt="house-icon" width={25} height={25} className="transition duration-200 group-hover:filter-img-filter" />
                                     Home
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/favorite" className="flex items-center justify-center gap-[5px] hover:text-sky-500 transition duration-200">
-                                    <Image src={heart_fill} alt="heart-fill-icon" width={25} height={25} className="transition duration-200" />
+                                <Link href="/favorite" className="flex items-center justify-center gap-[5px] hover:text-light_sky group transition duration-200">
+                                    <Image src={heart_fill} alt="heart-fill-icon" width={25} height={25} className="transition duration-200 group-hover:filter-img-filter" />
                                     Favorite
                                 </Link>
                             </li>
                         </ul>
-                        <button className="p-[6px] border-[1px] border-black-300 rounded-[5px]">
-                            <Image src={sun_icon}  alt="sun-icon" width={20} height={20}/>
+                        <button className="p-[6px] border-[1px] border-black-300 group rounded-[5px]">
+                            <Image src={sun_icon}  alt="sun-icon" width={20} height={20} className="transition duration-200 group-hover:filter-img-filter"/>
                         </button>
                     </div>
                 </div>
