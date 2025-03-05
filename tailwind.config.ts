@@ -11,8 +11,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        
       },
+      fontFamily : {
+        bokor : ["var(--font-bokor)"],
+      }
     },
   },
   plugins: [],

@@ -11,23 +11,14 @@ import house_icon from "../../../public/assets/icons/house.svg"
 import sun_icon from "../../../public/assets/icons/sun.svg"
 // import moon_icon from "../../../public/assets/icons/moon.svg"
 
-// HERE IMPORT FONT FROM GOOGLE AND OPTIMIZE BY NEXT
-import { Bokor } from "next/font/google"
-
-// WHERE BOKOR IS STATIC FONT
-const bokorFont = Bokor({
-    subsets : ['latin'],
-    weight : '400'
-});
-
 
 export default function NavBar(){
     return(
         <header className="bg-gray-50">
             <div className="container">
                 <div className="flex justify-between items-center py-4">
-                    <span className={`${bokorFont.className}`} >
-                        <strong className="text-[35px]">The DAILY NEWS</strong>
+                    <span>
+                        <strong className="font-bokor text-[35px]">The DAILY NEWS</strong>
                     </span>
                     <form className="max-w-[400px] w-full flex justify-center items-center p-1 border-2 border-black-300 rounded-[5px] has-[:focus]:border-black">
                         <input type="text" className="w-full input bg-transparent focus:outline-none"/>
@@ -35,7 +26,7 @@ export default function NavBar(){
                             <Image src={search_icon} alt="search_icon" width={20} height={20} />
                         </button>
                     </form>
-                    <div className="flex justify-center items-center gap-7">
+                    <div className="flex justify-center items-center gap-5">
                         <ul className="flex justify-center items-center gap-5">
                             <li className="hover:where" >
                                 <Link href="/" className="flex items-center justify-center gap-[5px] hover:text-sky-500 transition duration-200">

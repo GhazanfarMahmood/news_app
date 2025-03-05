@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Roboto, Bokor} from "next/font/google";
 import "@/style/globals.css";
 
 const robotoFont = Roboto({
@@ -7,8 +7,13 @@ const robotoFont = Roboto({
   weight : "400",
 });
 
-// title: "The Daily News",
-// description: "Daily News Site Always Keeps You Updated With the Latest Information.",
+// here we will create 
+
+const bokorFont = Bokor({
+  subsets : ["latin"],
+  weight : "400",
+  variable : "--font-bokor",
+});
 
 export const metadata: Metadata = {
   title: "The Daily News",
@@ -37,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${robotoFont.className} antialiased`}
+        className={`${robotoFont.className} ${bokorFont.variable} antialiased`}
       >
         {children}
       </body>
