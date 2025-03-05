@@ -9,7 +9,16 @@ import search_icon from "../../../public/assets/icons/search.svg"
 import heart_fill from "../../../public/assets/icons/heart-solid.svg"
 import house_icon from "../../../public/assets/icons/house.svg"
 import sun_icon from "../../../public/assets/icons/sun.svg"
-import moon_icon from "../../../public/assets/icons/moon.svg"
+// import moon_icon from "../../../public/assets/icons/moon.svg"
+
+// HERE IMPORT FONT FROM GOOGLE AND OPTIMIZE BY NEXT
+import { Bokor } from "next/font/google"
+
+// WHERE BOKOR IS STATIC FONT
+const bokorFont = Bokor({
+    subsets : ['latin'],
+    weight : '400'
+});
 
 
 export default function NavBar(){
@@ -17,10 +26,10 @@ export default function NavBar(){
         <header className="bg-gray-50">
             <div className="container">
                 <div className="flex justify-between items-center py-4">
-                    <span >
-                        <strong>The DAILY NEWS</strong>
+                    <span className={`${bokorFont.className}`} >
+                        <strong className="text-[35px]">The DAILY NEWS</strong>
                     </span>
-                    <form className="max-w-[400px] flex justify-center items-center p-1 border-2 border-black-300 rounded-[5px] has-[:focus]:border-black">
+                    <form className="max-w-[400px] w-full flex justify-center items-center p-1 border-2 border-black-300 rounded-[5px] has-[:focus]:border-black">
                         <input type="text" className="w-full input bg-transparent focus:outline-none"/>
                         <button>
                             <Image src={search_icon} alt="search_icon" width={20} height={20} />
@@ -28,15 +37,15 @@ export default function NavBar(){
                     </form>
                     <div className="flex justify-center items-center gap-7">
                         <ul className="flex justify-center items-center gap-5">
-                            <li>
-                                <Link href="/" className="flex items-center justify-center gap-[5px]">
-                                    <Image src={house_icon} alt="house-icon" width={25} height={25} />
+                            <li className="hover:where" >
+                                <Link href="/" className="flex items-center justify-center gap-[5px] hover:text-sky-500 transition duration-200">
+                                    <Image src={house_icon} alt="house-icon" width={25} height={25} className="transition duration-200" />
                                     Home
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/favorite" className="flex items-center justify-center gap-[5px]">
-                                    <Image src={heart_fill} alt="heart-fill-icon" width={25} height={25} />
+                                <Link href="/favorite" className="flex items-center justify-center gap-[5px] hover:text-sky-500 transition duration-200">
+                                    <Image src={heart_fill} alt="heart-fill-icon" width={25} height={25} className="transition duration-200" />
                                     Favorite
                                 </Link>
                             </li>
@@ -48,5 +57,5 @@ export default function NavBar(){
                 </div>
             </div>
         </header>
-    )
-}
+    );
+};

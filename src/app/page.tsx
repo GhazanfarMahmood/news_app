@@ -1,13 +1,8 @@
-import Home from "@/app/(routes)/Home/page"
-import Head from "next/head";
-
+import Home from "@/app/(pages)/Home/page"
 
 export default function Main() {
   return (
    <>
-    <Head>
-        <link rel="icon" href="/logo.png" />
-    </Head>
     <Home />
    </>
   );

@@ -1,41 +1,43 @@
 import type { Metadata } from "next";
-import Head from "next/head";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "@/style/globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const robotoFont = Roboto({
+  subsets : ['latin'],
+  weight : "400",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// title: "The Daily News",
+// description: "Daily News Site Always Keeps You Updated With the Latest Information.",
 
 export const metadata: Metadata = {
   title: "The Daily News",
   description: "Daily News Site Always Keeps You Updated With the Latest Information.",
-  // icons : {
-  //   icon: {
-  //     type : "png",
-  //     url: '/logo.png'
-  //   }
-  // }
+  // ! Adding dynamical favicon in site
+ icons : {
+  icon : [
+    {
+      media : "(prefers-color-scheme: light)",
+      url : "/images/favicon-1-32x32.png",
+      href : "/images/favicon-1-32x32.png"
+    },
+    {
+      media : "(prefers-color-scheme: dark)",
+      url : "/images/favicon-32x32.png",
+      href : "/images/favicon-32x32.png"
+    },
+  ]
+ }
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{children: React.ReactNode;}>) {
+  
   return (
     <html lang="en">
-      <Head>
-          <link rel="rel" href="/logo.png" />
-      </Head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${robotoFont.className} antialiased`}
       >
         {children}
       </body>
